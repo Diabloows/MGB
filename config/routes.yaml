@@ -130,6 +130,12 @@ speciality_show:
   requirements:
     id: '\d+'
 
+speciality_edit:
+  path: /edit/{id}
+  controller: App\Controller\SpecialityController::edit
+  requirements:
+    id: '\d+'    
+
 speciality_add:
   path: /add
   controller: App\Controller\SpecialityController::edit
