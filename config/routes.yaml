@@ -1,3 +1,141 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+homepage:
+    path: /
+    controller: App\Controller\HomeController::index
+
+# Routes des différents mouvement sur Mission
+
+mission_show:
+  path: /{id}
+  controller: App\Controller\MissionController::index
+  requirements:
+    id: '\d+'
+
+mission_add:
+  path: /add
+  controller: App\Controller\MissionController::edit
+
+mission_edit:
+  path: /edit/{id}
+  controller: App\Controller\MissionController::edit
+  requirements:
+    id: '\d+'
+  
+mission_remove:
+  path: /remove/{id}
+  controller: App\Controller\MissionController::remove
+  requirements:
+    id: '\d+'
+
+# Routes des différents mouvement sur Agent
+
+agent_show:
+  path: /{id}
+  controller: App\Controller\AgentController::index
+  requirements:
+    id: '\d+'
+
+agent_add:
+  path: /add
+  controller: App\Controller\AgentController::edit
+
+agent_edit:
+  path: /edit/{id}
+  controller: App\Controller\AgentController::edit
+  requirements:
+    id: '\d+'
+  
+agent_remove:
+  path: /remove/{id}
+  controller: App\Controller\AgentController::remove
+  requirements:
+    id: '\d+'
+
+# Routes des différents mouvement sur Cible
+
+cible_show:
+  path: /{id}
+  controller: App\Controller\CibleController::index
+  requirements:
+    id: '\d+'
+
+cible_add:
+  path: /add
+  controller: App\Controller\CibleController::edit
+
+cible_edit:
+  path: /edit/{id}
+  controller: App\Controller\CibleController::edit
+  requirements:
+    id: '\d+'
+  
+cible_remove:
+  path: /remove/{id}
+  controller: App\Controller\CibleController::remove
+  requirements:
+    id: '\d+'
+
+# Routes des différents mouvement sur Contact
+
+contact_show:
+  path: /{id}
+  controller: App\Controller\ContactController::index
+  requirements:
+    id: '\d+'
+
+contact_add:
+  path: /add
+  controller: App\Controller\ContactController::edit
+
+contact_edit:
+  path: /edit/{id}
+  controller: App\Controller\ContactController::edit
+  requirements:
+    id: '\d+'
+  
+contact_remove:
+  path: /remove/{id}
+  controller: App\Controller\ContactController::remove
+  requirements:
+    id: '\d+'
+
+# Routes des différents mouvement sur Planque
+
+planque_show:
+  path: /{id}
+  controller: App\Controller\PlanqueController::index
+  requirements:
+    id: '\d+'
+
+planque_add:
+  path: /add
+  controller: App\Controller\PlanqueController::edit
+
+planque_edit:
+  path: /edit/{id}
+  controller: App\Controller\PlanqueController::edit
+  requirements:
+    id: '\d+'
+  
+planque_remove:
+  path: /remove/{id}
+  controller: App\Controller\PlanqueController::remove
+  requirements:
+    id: '\d+'
+
+# Routes des différents mouvement sur Speciality
+
+speciality_show:
+  path: /{id}
+  controller: App\Controller\PlanqueController::index
+  requirements:
+    id: '\d+'
+
+speciality_add:
+  path: /add
+  controller: App\Controller\PlanqueController::edit
+
+speciality_remove:
+  path: /remove/{id}
+  controller: App\Controller\PlanqueController::remove
+  requirements:
+    id: '\d+'
