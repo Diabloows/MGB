@@ -126,16 +126,16 @@ planque_remove:
 
 speciality_show:
   path: /{id}
-  controller: App\Controller\PlanqueController::index
+  controller: App\Controller\SpecialityController::index
   requirements:
     id: '\d+'
 
 speciality_add:
   path: /add
-  controller: App\Controller\PlanqueController::edit
+  controller: App\Controller\SpecialityController::edit
 
 speciality_remove:
   path: /remove/{id}
-  controller: App\Controller\PlanqueController::remove
+  controller: App\Controller\SpecialityController::remove
   requirements:
     id: '\d+'
