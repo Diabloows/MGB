@@ -8,7 +8,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AgentController extends AbstractController
 {
-    #[Route('/agent', name: 'agent')]
+    /**
+     * Page Agent
+     * 
+     * @return Response
+     */
     public function index(): Response
     {
         return $this->render('agent/index.html.twig', [

@@ -2,17 +2,28 @@
 
 namespace App\Controller;
 
+use App\Entity\Speciality;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+
 class SpecialityController extends AbstractController
 {
-    #[Route('/speciality', name: 'speciality')]
+    /**
+     * Page Speciality
+     * 
+     * @return Response
+     */
     public function index(): Response
     {
+        //Entity Manager de Symfony
+        $em = $this->getDoctrine()->getManager();
+        // Affiche toutes les specialités en bdd
+        $speciality = $em->getRepository(Speciality::class)->findAll();
+
         return $this->render('speciality/index.html.twig', [
-            'controller_name' => 'SpecialityController',
+            'specialité' => $speciality,
         ]);
     }
 }

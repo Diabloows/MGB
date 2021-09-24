@@ -8,7 +8,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class CibleController extends AbstractController
 {
-    #[Route('/cible', name: 'cible')]
+    /**
+     * Page Cible
+     * 
+     * @return Response
+     */
     public function index(): Response
     {
         return $this->render('cible/index.html.twig', [

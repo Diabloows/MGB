@@ -8,7 +8,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PlanqueController extends AbstractController
 {
-    #[Route('/planque', name: 'planque')]
+    /**
+     * Page Planque
+     * 
+     * @return Response
+     */
     public function index(): Response
     {
         return $this->render('planque/index.html.twig', [
