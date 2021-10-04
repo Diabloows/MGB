@@ -1,20 +1,65 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
-
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/matth/OneDrive/Bureau/ECOLE/4 - Evaluations/6 - Créer une application web/RGB/mgb/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/matth/OneDrive/Bureau/ECOLE/4 - Evaluations/6 - Créer une application web/RGB/mgb/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
-</div>
+{% block title %}Accueil
 {% endblock %}
+
+{% block content %}
+
+	<div
+		class="container-fluid">
+		{# Titre de la page #}
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Accueil</h1>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Titre</th>
+					<th scope="col">Description</th>
+					<th scope="col">Nom de code</th>
+					<th scope="col">Pays</th>
+					<th scope="col">Agent</th>
+                    <th scope="col">Contact</th>
+                    <th scope="col">Cible</th>
+                    <th scope="col">Type mission</th>
+                    <th scope="col">Statut</th>
+                    <th scope="col">Planque</th>
+                    <th scope="col">Spécialité</th>
+                    <th scope="col">Début</th>
+                    <th scope="col">Fin</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				{% for mission in mission %}
+					<tr>
+						<th scope="row">
+							{{ article.id }}
+						</th>
+						<td>
+							{{ article.title }}
+						</td>
+						<td>
+							{{ article.content|nl2br }}
+						</td>
+						<td>
+							{{ article.isPublished ? 'Oui' : 'Non' }}
+						</td>
+						<td>
+							{{ article.author.username }}
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+
+{% endblock %}
+
+{% block stylesheets %}{% endblock %}
+
